@@ -1,0 +1,39 @@
+body{
+    background-color: #5998C5;
+}
+
+h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 80px;
+  text-align: center;
+}
+
+p{
+  color: #fff;
+  font-size: 38px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+#first{
+  background-color: red;
+}
+
+#second{
+  background-color: green;
+}
+
+#third{
+  background-color: yellow;
+}
+
+#fourth{
+  background-color: blue;
+}
+
+
+#greetings{
+    text-align: center;
+}

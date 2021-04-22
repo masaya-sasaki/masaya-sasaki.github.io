@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Masaya Sasaki's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
 
+    <script>
+      /* Reference: https://www.w3schools.com/howto/howto_js_typewriter.asp*/
+      var i = 0;
+      var txt = "Hello, I am Masaya Sasaki, Software developer.";
+      var speed = 50;
+
+      function typeWriter(){
+        if(i< txt.length){
+          document.getElementById("greetings").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed );
+        }
+      }
+
+      window.addEventListener('load', (event) => {
+  typeWriter();
+});
+      /*   when the page is loaded activate typewriter*/
+
+    </script>
 
   </head>
 
   <body>
-  Hello World!
+    <section id="first">
+      <h2 id="greetings"></h2>
+    </section>
 
+    <section id="second">
+    <p class="bio">
+  My name is Masaya Sasaki a senior in college double majoring in Computer Science and Education Studies.
+  I aspire to be a creative technologist as I am passionate about working on creative projects related Internet and Web technology.
+    </p>
+    </section>
+
+  <section id="third">
+  <ul class="projects">
+    <h2>Projects</h2>
+    <li>
+      Worked as a summer research intern in the <a href="">Cognition and Development Lab</a> at Yale University
+    </li>
+    <li>
+      Designed an <a href="">AR educational technology app</a> in Reality Virtually Hackathon at MIT Media Lab
+    </li>
+    <li>
+      Researched and developed a prototype of <a href=""> a self-driving remote controlled car</a> as an intern at an educational technology company
+    </li>
+    <li>
+      Designed a behavioral experiment for psychological research using <a href="">jsPsych</a> a javascript library
+    </li>
+  </ul>
+  </section>
+
+  <section id="fourth">
+  <ul class="links">
+    <h2>Links</h2>
+    <li>
+      This is my <a href="">Github Account</a>.
+    </li>
+  </ul>
+</section>
   </body>
 
   <footer>
