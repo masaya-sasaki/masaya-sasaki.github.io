@@ -9,7 +9,7 @@
     <script>
       /* Reference: https://www.w3schools.com/howto/howto_js_typewriter.asp*/
       var i = 0;
-      var txt = "Hello, I am Masaya Sasaki, Software developer.";
+      var txt = "Hello, my name is Masaya Sasaki. I make software.";
       var speed = 50;
 
       function typeWriter(){
@@ -23,50 +23,62 @@
       window.addEventListener('load', (event) => {
   typeWriter();
 });
-      /*   when the page is loaded activate typewriter*/
+        /* when the page is loaded activate typewriter. Additionally, try to add a feature to measure the screen size of the user and
+        set a deafult min height value for greetings so the page doesn't shift when the typewriter is working.
+        */
 
     </script>
 
   </head>
 
   <body>
-    <section id="first">
-      <h2 id="greetings"></h2>
-    </section>
+    <!-- Reference https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
+    <div class="sidebar">
+      <a class="acitve" href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#links">LINKS</a>
+    </div>
+    <div class="content">
+      <section id="first">
+        <h1 id="greetings"></h1>
+      </section>
 
-    <section id="second">
-    <p class="bio">
-  My name is Masaya Sasaki a senior in college double majoring in Computer Science and Education Studies.
-  I aspire to be a creative technologist as I am passionate about working on creative projects related Internet and Web technology.
-    </p>
-    </section>
+      <section id="second">
+      <p id="about">
+    My name is Masaya Sasaki a senior in college double majoring in Computer Science and Education Studies.
+    I aspire to be a creative technologist as I am passionate about working on creative projects related to Internet and Web technology.
+      </p>
+      </section>
 
-  <section id="third">
-  <ul class="projects">
+    <section id="third">
     <h2>Projects</h2>
-    <li>
-      Worked as a summer research intern in the <a href="">Cognition and Development Lab</a> at Yale University
-    </li>
-    <li>
-      Designed an <a href="">AR educational technology app</a> in Reality Virtually Hackathon at MIT Media Lab
-    </li>
-    <li>
-      Researched and developed a prototype of <a href=""> a self-driving remote controlled car</a> as an intern at an educational technology company
-    </li>
-    <li>
-      Designed a behavioral experiment for psychological research using <a href="">jsPsych</a> a javascript library
-    </li>
-  </ul>
-  </section>
+    <ul id="projects">
+      <li>
+        Worked as a summer research intern in the <a href="https://cogdevlab.yale.edu/">Cognition and Development Lab</a> at Yale University
+      </li>
+      <li>
+        Designed an <a href="https://devpost.com/software/holo-learn">AR educational technology app</a> in Reality Virtually Hackathon at MIT Media Lab
+      </li>
+      <li>
+        Researched and developed a prototype of <a href=""> a self-driving remote controlled car</a> as an intern at an educational technology company
+      </li>
+      <li>
+        Designed a behavioral experiment for psychological research using <a href="https://www.jspsych.org/">jsPsych</a> a javascript library
+      </li>
+    </ul>
+    </section>
 
-  <section id="fourth">
-  <ul class="links">
+    <section id="fourth">
     <h2>Links</h2>
-    <li>
-      This is my <a href="">Github Account</a>.
-    </li>
-  </ul>
-</section>
+    <ul id="links">
+      <li>
+        This is my <a href="https://github.com/masaya-sasaki">Github Account</a>.
+      </li>
+    </ul>
+  </section>
+    </div>
+
   </body>
 
   <footer>

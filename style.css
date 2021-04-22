@@ -1,38 +1,113 @@
+:root{
+  font-size:62.5%
+}
+
 body{
     background-color: #5998C5;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+  font-size: 8rem;
+  text-align: center;
 }
 
 h2{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 80px;
+  font-size: 6rem;
   text-align: center;
 }
 
 p{
   color: #fff;
-  font-size: 38px;
-  font-family: 'Source Sans Pro', sans-serif;
-  display: block;
+  font-size: 3.8rem;
   margin: 0 auto;
   max-width: 70%;
 }
 
+ul{
+}
+
+li{
+  padding: 1rem;
+}
+
+#projects{
+  font-size: 3rem;
+  max-width: 70;
+  text-align: center;
+}
+
+.sidebar{
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a{
+  display: block;
+  font-size: 3rem;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sidebar a.active{
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+}
+
+div.content{
+  margin-left: 20rem;
+  padding: 0.1rem 1.6rem;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
 #first{
-  background-color: red;
+  min-height: 26rem;
 }
 
 #second{
-  background-color: green;
+  margin-top: 40px;
 }
 
 #third{
-  background-color: yellow;
 }
 
 #fourth{
-  background-color: blue;
+  padding-bottom: 10rem;
 }
 
+#links{
+  font-size: 3rem;
+}
 
 #greetings{
     text-align: center;
