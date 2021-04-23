@@ -9,11 +9,9 @@
     <script>
       /* Reference: https://www.w3schools.com/howto/howto_js_typewriter.asp*/
       var i = 0;
-      var j=0;
       var txt = "Hello, my name is Masaya Sasaki. I make software.";
-      var jptxt = "こんにちは、佐々木雅也です。ソフトウェアを作ることが好きです。";
       var speed = 50;
-      var jpspeed = 100;
+
 
       function typeWriter(){
         if(i< txt.length){
@@ -26,16 +24,7 @@
         }
       }
 
-      function typeWriterJp(){
-        if(j< jptxt.length){
-          document.getElementById("greetings").innerHTML += jptxt.charAt(j);
-          j++;
-          setTimeout(typeWriterJp, jpspeed );
-        }
-        else{
-          return;
-        }
-      }
+
 
       window.addEventListener('load', (event) => {
   typeWriter();
@@ -44,35 +33,7 @@
         set a deafult min height value for greetings so the page doesn't shift when the typewriter is working.
         */
 
-      function toggleLanguage(language){
-        document.getElementById("greetings").innerHTML = "";
-        this.typeWriterJp();
-        let sbhome = document.getElementById("sbhome");
-        let sbabout = document.getElementById("sbabout");
-        let sbprojects = document.getElementById("sbprojects");
-        let sblinks = document.getElementById("sblinks");
-        let about = document.getElementById("about");
-        let projectstitle = document.getElementById("projectstitle");
-        let linkstitle = document.getElementById("linkstitle");
-        let sri = document.getElementById("sri");
-        let dae = document.getElementById("dae");
-        let rdp = document.getElementById("rdp");
-        let dbe = document.getElementById("dbe");
 
-        if(language === "Japanese"){
-          sbhome.innerHTML = "ホーム";
-          sbabout.innerHTML = "自己紹介";
-          sbprojects.innerHTML = "プロジェクト";
-          sblinks.innerHTML = "リンク";
-          about.innerHTML = "私の名前は佐々木雅也です。大学でコンピュータサイエンスと教育学を専攻しています。インターネットとウェブ技術に関連するプロジェクトに取り組むのが好きで、クリエイティブテクノロジストになることを目指しています";
-          projectstitle.innerHTML = "プロジェクト";
-          linkstitle.innerHTML = "リンク";
-          sri.innerHTML = 'イェール大学の<a href="https://cogdevlab.yale.edu/">認知発達研究室</a>で夏季研究インターンとして勤務';
-          dae.innerHTML = 'MITメディアラボのRealityVirtuallyHackathonで<ahref = "https://devpost.com/software/holo-learn"> AR教育テクノロジーアプリ</a>を設計しました';
-          rdp.innerHTML = 'EdTech会社のインターンとして、<ahref = "">自動運転リモートコントロールカー</a>のプロトタイプを研究開発しました';
-          dbe.innerHTML = '<a href="https://www.jspsych.org/"> jsPsych </a> というjavascriptライブラリを使用して、心理学研究のための行動実験を設計しました';
-        }
-      }
 
     </script>
 
@@ -81,7 +42,6 @@
   <body>
     <!-- Reference https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
     <div class="sidebar">
-      <button type="button" onclick="toggleLanguage('Japanese')">日本語</button>
       <a href="jp.html" id="japanese">日本語</a>
       <a class="acitve" href="#home" id="sbhome">HOME</a>
       <a href="#about" id="sbabout">ABOUT</a>

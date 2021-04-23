@@ -1,6 +1,92 @@
 <!DOCTYPE html>
 <html>
-<body>
-hello this is the japanese page
-</body>
+  <head>
+    <title>佐々木雅也のウェブサイト</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+
+    <script>
+      /* Reference: https://www.w3schools.com/howto/howto_js_typewriter.asp*/
+      var j=0;
+      var jptxt = "こんにちは、佐々木雅也です。ソフトウェアを作ることが好きです。";
+      var jpspeed = 100;
+
+      function typeWriterJp(){
+        if(j< jptxt.length){
+          document.getElementById("greetings").innerHTML += jptxt.charAt(j);
+          j++;
+          setTimeout(typeWriterJp, jpspeed );
+        }
+        else{
+          return;
+        }
+      }
+
+      window.addEventListener('load', (event) => {
+  typeWriterJp();
+});
+        /* when the page is loaded activate typewriter. Additionally, try to add a feature to measure the screen size of the user and
+        set a deafult min height value for greetings so the page doesn't shift when the typewriter is working.
+        */
+
+    </script>
+
+  </head>
+
+  <body>
+    <!-- Reference https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
+    <div class="sidebar">
+      <a href="index.html" id="english">English</a>
+      <a class="acitve" href="#home" id="sbhome">ホーム</a>
+      <a href="#about" id="sbabout">自己紹介</a>
+      <a href="#projects" id="sbprojects">プロジェクト</a>
+      <a href="#links" id="sblinks">リンク</a>
+    </div>
+    <div class="content">
+      <section id="first">
+        <h1 id="greetings"></h1>
+      </section>
+
+      <section id="second">
+      <p id="about">
+    私の名前は佐々木雅也です。大学でコンピュータサイエンスと教育学を専攻しています。インターネットとウェブ技術に関連するプロジェクトに取り組むのが好きで、
+    クリエイティブテクノロジストになることを目指しています。
+      </p>
+      </section>
+
+    <section id="third">
+    <h2 id="projectstitle">プロジェクト</h2>
+    <ul id="projects">
+      <li id="sri">
+        イェール大学の<a href="https://cogdevlab.yale.edu/">認知発達研究室</a>で夏季研究インターンとして勤務
+      </li>
+      <li id="dae">
+        MITメディアラボのRealityVirtuallyHackathonで<a href = "https://devpost.com/software/holo-learn"> AR教育テクノロジーアプリ</a>を設計しました。
+      </li>
+      <li id="rdp">
+        EdTech会社のインターンとして、<a href = "">自動運転リモートコントロールカー</a>のプロトタイプを研究開発しました。
+      </li>
+      <li id="dbe">
+        <a href="https://www.jspsych.org/"> jsPsych </a> というjavascriptライブラリを使用して、心理学研究のための行動実験を設計しました
+      </li>
+    </ul>
+    </section>
+
+    <section id="fourth">
+    <h2 id="linkstitle">リンク</h2>
+    <ul id="links">
+      <li>
+        こちらが <a href="https://github.com/masaya-sasaki">Github</a>のアカウントです。
+      </li>
+    </ul>
+  </section>
+    </div>
+
+  </body>
+
+  <footer>
+
+  </footer>
+
 </html>
