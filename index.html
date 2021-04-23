@@ -9,14 +9,31 @@
     <script>
       /* Reference: https://www.w3schools.com/howto/howto_js_typewriter.asp*/
       var i = 0;
+      var j=0;
       var txt = "Hello, my name is Masaya Sasaki. I make software.";
+      var jptxt = "こんにちは、佐々木雅也です。ソフトウェアを作ることが好きです。";
       var speed = 50;
+      var jpspeed = 100;
 
       function typeWriter(){
         if(i< txt.length){
           document.getElementById("greetings").innerHTML += txt.charAt(i);
           i++;
           setTimeout(typeWriter, speed );
+        }
+        else{
+          return
+        }
+      }
+
+      function typeWriterJp(){
+        if(j< jptxt.length){
+          document.getElementById("greetings").innerHTML += jptxt.charAt(j);
+          j++;
+          setTimeout(typeWriterJp, jpspeed );
+        }
+        else{
+          return;
         }
       }
 
@@ -27,6 +44,36 @@
         set a deafult min height value for greetings so the page doesn't shift when the typewriter is working.
         */
 
+      function toggleLanguage(language){
+        document.getElementById("greetings").innerHTML = "";
+        this.typeWriterJp();
+        let sbhome = document.getElementById("sbhome");
+        let sbabout = document.getElementById("sbabout");
+        let sbprojects = document.getElementById("sbprojects");
+        let sblinks = document.getElementById("sblinks");
+        let about = document.getElementById("about");
+        let projectstitle = document.getElementById("projectstitle");
+        let linkstitle = document.getElementById("linkstitle");
+        let sri = document.getElementById("sri");
+        let dae = document.getElementById("dae");
+        let rdp = document.getElementById("rdp");
+        let dbe = document.getElementById("dbe");
+
+        if(language === "Japanese"){
+          sbhome.innerHTML = "ホーム";
+          sbabout.innerHTML = "自己紹介";
+          sbprojects.innerHTML = "プロジェクト";
+          sblinks.innerHTML = "リンク";
+          about.innerHTML = "私の名前は佐々木雅也です。大学でコンピュータサイエンスと教育学を専攻しています。インターネットとウェブ技術に関連するプロジェクトに取り組むのが好きで、クリエイティブテクノロジストになることを目指しています";
+          projectstitle.innerHTML = "プロジェクト";
+          linkstitle.innerHTML = "リンク";
+          sri.innerHTML = 'イェール大学の<a href="https://cogdevlab.yale.edu/">認知発達研究室</a>で夏季研究インターンとして勤務';
+          dae.innerHTML = 'MITメディアラボのRealityVirtuallyHackathonで<ahref = "https://devpost.com/software/holo-learn"> AR教育テクノロジーアプリ</a>を設計しました';
+          rdp.innerHTML = 'EdTech会社のインターンとして、<ahref = "">自動運転リモートコントロールカー</a>のプロトタイプを研究開発しました';
+          dbe.innerHTML = '<a href="https://www.jspsych.org/"> jsPsych </a> というjavascriptライブラリを使用して、心理学研究のための行動実験を設計しました';
+        }
+      }
+
     </script>
 
   </head>
@@ -34,10 +81,11 @@
   <body>
     <!-- Reference https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
     <div class="sidebar">
-      <a class="acitve" href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#links">LINKS</a>
+      <button onclick="toggleLanguage('Japanese')">日本語</button>
+      <a class="acitve" href="#home" id="sbhome">HOME</a>
+      <a href="#about" id="sbabout">ABOUT</a>
+      <a href="#projects" id="sbprojects">PROJECTS</a>
+      <a href="#links" id="sblinks">LINKS</a>
     </div>
     <div class="content">
       <section id="first">
@@ -52,25 +100,25 @@
       </section>
 
     <section id="third">
-    <h2>Projects</h2>
+    <h2 id="projectstitle">Projects</h2>
     <ul id="projects">
-      <li>
+      <li id="sri">
         Worked as a summer research intern in the <a href="https://cogdevlab.yale.edu/">Cognition and Development Lab</a> at Yale University
       </li>
-      <li>
+      <li id="dae">
         Designed an <a href="https://devpost.com/software/holo-learn">AR educational technology app</a> in Reality Virtually Hackathon at MIT Media Lab
       </li>
-      <li>
+      <li id="rdp">
         Researched and developed a prototype of <a href=""> a self-driving remote controlled car</a> as an intern at an educational technology company
       </li>
-      <li>
+      <li id="dbe">
         Designed a behavioral experiment for psychological research using <a href="https://www.jspsych.org/">jsPsych</a> a javascript library
       </li>
     </ul>
     </section>
 
     <section id="fourth">
-    <h2>Links</h2>
+    <h2 id="linkstitle">Links</h2>
     <ul id="links">
       <li>
         This is my <a href="https://github.com/masaya-sasaki">Github Account</a>.
